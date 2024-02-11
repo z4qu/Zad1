@@ -27,7 +27,7 @@ namespace Homework1
             string age;
             
             //d. Sex (‘m’ or ‘k’)
-            string sex;
+            string gender;
             
             //e. PESEL 
             string pesel;
@@ -47,8 +47,12 @@ namespace Homework1
             
             Console.WriteLine("3. Sex ‘m’ or ‘k’");
 
-            sex = Console.ReadLine();
-            
+            gender = Console.ReadLine();
+
+            char enteredGender;
+
+            char.TryParse(gender, out enteredGender);
+                
             Console.WriteLine("4. Age");
             
             age = Console.ReadLine();
