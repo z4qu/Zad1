@@ -53,13 +53,27 @@ namespace Homework1
             
             age = Console.ReadLine();
             
+            int enteredAge = 0;
+
+            Int32.TryParse(age, out enteredAge);
+            
             Console.WriteLine("5. PESEL");
             
             pesel = Console.ReadLine();
             
+            Int128 enteredPesel = 0;
+            
+            Int128.TryParse(pesel, out enteredPesel);
+            
             Console.WriteLine("6. Number of employee");
             
             numberOfEmployee = Console.ReadLine();
+            
+            Int128 enteredNumberOfEmployee = 0;
+            
+            Int128.TryParse(numberOfEmployee, out enteredNumberOfEmployee);
+            
+            Console.Write($"1. {name} \r\n2. {surname} \r\n3. {enteredAge} \r\n4. {sex} \r\n5. {enteredPesel} \r\n6. {enteredNumberOfEmployee}");
             
         }
     }
