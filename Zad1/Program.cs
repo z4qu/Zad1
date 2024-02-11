@@ -77,7 +77,7 @@ namespace Homework1
             
             Int128.TryParse(numberOfEmployee, out enteredNumberOfEmployee);
             
-            Console.Write($"1. {name} \r\n2. {surname} \r\n3. {enteredAge} \r\n4. {sex} \r\n5. {enteredPesel} \r\n6. {enteredNumberOfEmployee}");
+            Console.Write($"1. {name} \r\n2. {surname} \r\n3. {enteredAge} \r\n4. {enteredGender} \r\n5. {enteredPesel} \r\n6. {enteredNumberOfEmployee}");
             
         }
     }
