@@ -43,7 +43,6 @@ namespace Homework1
             //f. Number of employee  (np. 2509324094)
             Console.WriteLine("4. Number of employee");
             int.TryParse(Console.ReadLine(), out var numberOfEmployee);
-            numberOfEmployee.ToString()
            
             Console.Write($"1. {name} \r\n2. {surname} \r\n3. {age} \r\n4. {gender[0]} \r\n5. {pesel} \r\n6. {numberOfEmployee}");
             
