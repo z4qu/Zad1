@@ -10,7 +10,9 @@ Zadeklaruj zmienne odpowiednich typów, które mogą przetrzymywać te informacj
 */
 
 using System;
-
+using System.Runtime;
+    
+    
 namespace Homework1
 {
     class Program
@@ -18,66 +20,32 @@ namespace Homework1
     static void Main(string[] args)
         {
             //a. Name
-            string name;
+            Console.WriteLine("Please provide following data:");
+            Console.WriteLine("1. Name");
+            var name = Console.ReadLine();
             
             //b. Surname 
-            string surname;
+            Console.WriteLine("2. Surname");
+            var surname = Console.ReadLine();
             
             //c. Age
-            string age;
+            Console.WriteLine("3. Age");
+            int.TryParse(Console.ReadLine(), out var age);
             
-            //d. Sex (‘m’ or ‘k’)
-            string gender;
+            //d. Gender (‘m’ or ‘k’)
+            Console.WriteLine("4. Gender ‘m’ or ‘k’");
+            string gender = Console.ReadLine();
             
             //e. PESEL 
-            string pesel;
+            Console.WriteLine("5. PESEL");
+            long.TryParse(Console.ReadLine(), out var pesel);
             
             //f. Number of employee  (np. 2509324094)
-            string numberOfEmployee;
-            
-            Console.WriteLine("Please provide following data:");
-            
-            Console.WriteLine("1. Name");
-
-            name = Console.ReadLine();
-            
-            Console.WriteLine("2. Surname");
-            
-            surname = Console.ReadLine();
-            
-            Console.WriteLine("3. Sex ‘m’ or ‘k’");
-
-            gender = Console.ReadLine();
-
-            char enteredGender;
-
-            char.TryParse(gender, out enteredGender);
-                
-            Console.WriteLine("4. Age");
-            
-            age = Console.ReadLine();
-            
-            int enteredAge = 0;
-
-            Int32.TryParse(age, out enteredAge);
-            
-            Console.WriteLine("5. PESEL");
-            
-            pesel = Console.ReadLine();
-            
-            Int128 enteredPesel = 0;
-            
-            Int128.TryParse(pesel, out enteredPesel);
-            
-            Console.WriteLine("6. Number of employee");
-            
-            numberOfEmployee = Console.ReadLine();
-            
-            Int128 enteredNumberOfEmployee = 0;
-            
-            Int128.TryParse(numberOfEmployee, out enteredNumberOfEmployee);
-            
-            Console.Write($"1. {name} \r\n2. {surname} \r\n3. {enteredAge} \r\n4. {enteredGender} \r\n5. {enteredPesel} \r\n6. {enteredNumberOfEmployee}");
+            Console.WriteLine("4. Number of employee");
+            int.TryParse(Console.ReadLine(), out var numberOfEmployee);
+            numberOfEmployee.ToString()
+           
+            Console.Write($"1. {name} \r\n2. {surname} \r\n3. {age} \r\n4. {gender[0]} \r\n5. {pesel} \r\n6. {numberOfEmployee}");
             
         }
     }
